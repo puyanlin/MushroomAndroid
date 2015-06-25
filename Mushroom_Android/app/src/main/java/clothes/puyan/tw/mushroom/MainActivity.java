@@ -37,6 +37,7 @@ public class MainActivity extends Activity {
 
         // Enable Local Datastore.
         Parse.initialize(this, "", "");
+
         ParseInstallation.getCurrentInstallation().saveInBackground();
 
 
@@ -113,7 +114,8 @@ public class MainActivity extends Activity {
                     for (ParseObject closet : objects) {
                         View closetView = inflater.inflate(R.layout.layout_closetrow, llClosetContainer, false);
                         TextView tvName = (TextView) closetView.findViewById(R.id.tvClosetName);
-                        tvName.setText(closet.getString("Name"));
+                        final String closetName=closet.getString("Name");
+                        tvName.setText(closetName);
 
                         TextView tvDetail = (TextView) closetView.findViewById(R.id.tvClosetDetail);
 
@@ -123,6 +125,17 @@ public class MainActivity extends Activity {
                         if (isNew) tvDetail.setText("新");
 
                         llClosetContainer.addView(closetView);
+
+                        final String assosiated=closet.getString("AssosiatedTable");
+                        closetView.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Intent intent = new Intent(MainActivity.this, ClosetClassActivity.class);
+                                intent.putExtra(ClosetClassActivity.CLASS_NAME_EXTRA,closetName);
+                                intent.putExtra(ClosetClassActivity.PARSE_CLASS_NAME_EXTRA,assosiated);
+                                startActivity(intent);
+                            }
+                        });
 
                         final ImageView closetImage = (ImageView) closetView.findViewById(R.id.imgViewClosetCover);
                         new AsyncTask<String, Void, Bitmap>() {
