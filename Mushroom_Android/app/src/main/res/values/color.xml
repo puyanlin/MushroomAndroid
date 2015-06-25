@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="close_red">#ffff4f41</color>
+    <color name="standard_yellow">#fffeeea1</color>
+    <color name="open_green">#ff31c7be</color>
+    <color name="sales_red">#ffe03328</color>
+</resources>

@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/scrollView"
+    android:fillViewport="true">
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="我是香菇，因愛穿韓貨、愛看韓劇，因此決定在研究所時候開始我的擺攤人生。沒想到能從邊趕論文邊批貨擺攤到現在全職擺攤生活；更沒想到連粉絲團也成立了，app也有了！！一切都感謝各位的支持愛護，我會更加努力，維持我的熱忱，找更多好看的服飾，讓大家一起變美變有型!"
+            android:id="@+id/textView2"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="15dp"
+            android:layout_margin="10dp"
+            android:paddingBottom="15dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ffaaaaaa"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/lineRow">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/imageViewline"
+                android:background="@drawable/linebutton"
+                android:paddingRight="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Line ID"
+                android:id="@+id/textViewline"
+                android:layout_toRightOf="@+id/imageViewline"
+                android:layout_toEndOf="@+id/imageViewline"
+                android:layout_alignTop="@+id/imageViewline"
+                android:layout_alignBottom="@+id/imageViewline"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="yenju1208(香菇)"
+                android:id="@+id/textViewlineid"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignTop="@+id/textViewline"
+                android:layout_alignBottom="@+id/textViewline"
+                android:gravity="center_vertical"
+                android:layout_marginRight="10dp"
+                android:textColor="#ff777777" />
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ffaaaaaa"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/fbRow">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/imageViewfb"
+                android:background="@drawable/fb"
+                android:paddingRight="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="fb粉絲頁"
+                android:id="@+id/textViewfb"
+                android:layout_toRightOf="@+id/imageViewfb"
+                android:layout_toEndOf="@+id/imageViewfb"
+                android:layout_alignTop="@+id/imageViewfb"
+                android:layout_alignBottom="@+id/imageViewfb"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="香菇日韓服飾"
+                android:id="@+id/textViewfbpage"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignTop="@+id/textViewfb"
+                android:layout_alignBottom="@+id/textViewfb"
+                android:gravity="center_vertical"
+                android:layout_marginRight="10dp"
+                android:textColor="#ff777777" />
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ffaaaaaa"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/phoneRow">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/imageViewtel"
+                android:background="@drawable/phone"
+                android:paddingRight="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="聯絡電話"
+                android:id="@+id/textViewtel"
+                android:layout_toRightOf="@+id/imageViewtel"
+                android:layout_toEndOf="@+id/imageViewtel"
+                android:layout_alignTop="@+id/imageViewtel"
+                android:layout_alignBottom="@+id/imageViewtel"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="0916-242-077"
+                android:id="@+id/textViewtelnum"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignTop="@+id/textViewtel"
+                android:layout_alignBottom="@+id/textViewtel"
+                android:gravity="center_vertical"
+                android:layout_marginRight="10dp"
+                android:textColor="#ff777777" />
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ffaaaaaa"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/addrRow">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/imageView2"
+                android:background="@drawable/map"
+                android:paddingRight="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text=""
+                android:id="@+id/textView3"
+                android:layout_toRightOf="@+id/imageView2"
+                android:layout_toEndOf="@+id/imageView2"
+                android:layout_alignTop="@+id/imageView2"
+                android:layout_alignBottom="@+id/imageView2"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="新北市三重區長壽西街54號"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignTop="@+id/textView3"
+                android:layout_alignBottom="@+id/textView3"
+                android:gravity="center_vertical"
+                android:layout_marginRight="10dp"
+                android:textColor="#ff777777" />
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ffaaaaaa" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="App製作"
+            android:gravity="bottom"
+            android:background="#dddddd"
+            android:paddingLeft="10dp"
+            android:paddingBottom="3dp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ffaaaaaa" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/myMailRow">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/imageViewmail"
+                android:background="@drawable/mail"
+                android:paddingRight="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text=""
+                android:id="@+id/textViewmail"
+                android:layout_toRightOf="@+id/imageViewmail"
+                android:layout_toEndOf="@+id/imageViewmail"
+                android:layout_alignTop="@+id/imageViewmail"
+                android:layout_alignBottom="@+id/imageViewmail"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="puyanlinmailbox@gmail.com"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignTop="@+id/textViewmail"
+                android:layout_alignBottom="@+id/textViewmail"
+                android:gravity="center_vertical"
+                android:layout_marginRight="10dp"
+                android:textColor="#ff777777" />
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ffaaaaaa"/>
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Copyright (c) 2015 Puyan.All rights reserved."
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/textViewmail"
+            android:layout_alignBottom="@+id/textViewmail"
+            android:gravity="center_vertical"
+            android:textColor="#ff777777"
+            android:padding="5dp"
+            android:background="#000000" />
+    </LinearLayout>
+</ScrollView>
