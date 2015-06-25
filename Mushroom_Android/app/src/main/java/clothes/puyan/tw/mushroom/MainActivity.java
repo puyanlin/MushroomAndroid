@@ -11,11 +11,10 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
@@ -26,6 +25,8 @@ import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.List;
+
+import clothes.puyan.tw.mushroom.datasource.NewsAdaptor;
 
 public class MainActivity extends Activity {
     final String TAG="MainActivity";
@@ -106,24 +107,24 @@ public class MainActivity extends Activity {
         queryCloset.findInBackground(new FindCallback<ParseObject>() {
             public void done(List<ParseObject> objects, ParseException e) {
                 if (e == null) {
-                    LinearLayout llClosetContainer=(LinearLayout) findViewById(R.id.llClosetContainer);
+                    LinearLayout llClosetContainer = (LinearLayout) findViewById(R.id.llClosetContainer);
 
-                    LayoutInflater inflater=(LayoutInflater)getSystemService(LAYOUT_INFLATER_SERVICE);
-                    for(ParseObject closet:objects){
-                        View closetView=inflater.inflate(R.layout.layout_closetrow,llClosetContainer,false);
-                        TextView tvName=(TextView)closetView.findViewById(R.id.tvClosetName);
+                    LayoutInflater inflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
+                    for (ParseObject closet : objects) {
+                        View closetView = inflater.inflate(R.layout.layout_closetrow, llClosetContainer, false);
+                        TextView tvName = (TextView) closetView.findViewById(R.id.tvClosetName);
                         tvName.setText(closet.getString("Name"));
 
-                        TextView tvDetail=(TextView) closetView.findViewById(R.id.tvClosetDetail);
+                        TextView tvDetail = (TextView) closetView.findViewById(R.id.tvClosetDetail);
 
-                        boolean onSale=closet.getBoolean("onSale");
-                        boolean isNew=closet.getBoolean("New");
-                        if(onSale) tvDetail.setText("特價");
-                        if(isNew) tvDetail.setText("新");
+                        boolean onSale = closet.getBoolean("onSale");
+                        boolean isNew = closet.getBoolean("New");
+                        if (onSale) tvDetail.setText("特價");
+                        if (isNew) tvDetail.setText("新");
 
                         llClosetContainer.addView(closetView);
 
-                        final ImageView closetImage=(ImageView) closetView.findViewById(R.id.imgViewClosetCover);
+                        final ImageView closetImage = (ImageView) closetView.findViewById(R.id.imgViewClosetCover);
                         new AsyncTask<String, Void, Bitmap>() {
                             @Override
                             protected Bitmap doInBackground(String... params) {
@@ -138,6 +139,20 @@ public class MainActivity extends Activity {
                             }
                         }.execute(closet.getString("CoverURL"));
                     }
+
+                } else {
+
+                }
+            }
+        });
+
+        ParseQuery queryNews=ParseQuery.getQuery("News");
+        queryNews.findInBackground(new FindCallback<ParseObject>() {
+            public void done(List<ParseObject> objects, ParseException e) {
+                if (e == null) {
+                    NewsAdaptor newsAdaptor=new NewsAdaptor(MainActivity.this,android.R.layout.simple_list_item_1,objects);
+                    ListView newsListView=(ListView) findViewById(R.id.newsListView);
+                    newsListView.setAdapter(newsAdaptor);
 
                 } else {
 

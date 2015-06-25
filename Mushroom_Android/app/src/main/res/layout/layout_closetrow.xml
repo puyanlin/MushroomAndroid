@@ -29,11 +29,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text=""
         android:id="@+id/tvClosetDetail"
-        android:layout_centerVertical="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:paddingRight="5dp"
-        android:textColor="#ffffaa9f" />
+        android:layout_alignParentEnd="false"
+        android:paddingRight="3dp"
+        android:textColor="#ffffaa9f"
+        android:layout_alignParentTop="true"
+        android:paddingTop="2dp" />
 </RelativeLayout>

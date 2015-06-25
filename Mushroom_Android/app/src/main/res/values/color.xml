@@ -4,4 +4,8 @@
     <color name="standard_yellow">#fffeeea1</color>
     <color name="open_green">#ff31c7be</color>
     <color name="sales_red">#ffe03328</color>
+    <color name="new_blue">#ff6fcfec</color>
+    <color name="declare_green">#fffec107</color>
+    <color name="activty_gray">#ff969696</color>
+    <color name="holiday_red">#ffe4003a</color>
 </resources>
