@@ -1,5 +1,7 @@
 package clothes.puyan.tw.mushroom;
 
+import android.app.AlertDialog;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
@@ -26,6 +28,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.List;
 
+import clothes.puyan.tw.mushroom.datasource.BookingManager;
 import clothes.puyan.tw.mushroom.datasource.NewsAdaptor;
 
 
@@ -46,7 +49,7 @@ public class ClosetClassActivity extends AppCompatActivity {
                     LayoutInflater inflater=(LayoutInflater)getSystemService(LAYOUT_INFLATER_SERVICE);
                     LinearLayout llClothes=(LinearLayout) findViewById(R.id.llClothes);
 
-                    for(ParseObject cloth : objects){
+                    for(final ParseObject cloth : objects){
                         RelativeLayout rlClothView=(RelativeLayout) inflater.inflate(R.layout.layout_cloth,llClothes,false);
                         llClothes.addView(rlClothView);
 
@@ -57,12 +60,14 @@ public class ClosetClassActivity extends AppCompatActivity {
                             @Override
                             public void onClick(View v) {
                                 View checkView=v.findViewById(R.id.imgViewSelect);
-                                if(checkView.getVisibility()==View.INVISIBLE){
+                                if(!BookingManager.getInstance().isContainItem(cloth)){
                                     checkView.setVisibility(View.VISIBLE);
                                     v.setBackgroundColor(Color.parseColor("#888888"));
+                                    BookingManager.getInstance().addItem(cloth);
                                 }else{
                                     checkView.setVisibility(View.INVISIBLE);
                                     v.setBackgroundColor(Color.parseColor("#444444"));
+                                    BookingManager.getInstance().deleteItem(cloth);
                                 }
                             }
                         });
@@ -107,6 +112,18 @@ public class ClosetClassActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_my_closet) {
+            if(BookingManager.getInstance().getBookingArray()==null||
+               BookingManager.getInstance().getBookingArray().length==0){
+                AlertDialog.Builder builder = new AlertDialog.Builder(ClosetClassActivity.this);
+                builder.setMessage("衣櫃裡還沒有衣服喔");
+                builder.setPositiveButton("好",null);
+                builder.create().show();
+
+                return true;
+            }
+            Intent intent = new Intent(ClosetClassActivity.this, MyClosetActivity.class);
+            startActivity(intent);
+            finish();
             return true;
         }
 

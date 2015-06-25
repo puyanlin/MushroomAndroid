@@ -57,7 +57,7 @@
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
                 <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
 
-<!--                   IMPORTANT: Change "com.parse.starter" to match your app's package name. -->
+                <!-- IMPORTANT: Change "com.parse.starter" to match your app's package name. -->
                 <category android:name="clothes.puyan.tw.mushroom" />
             </intent-filter>
         </receiver>
@@ -66,10 +66,14 @@
             android:name=".ClosetClassActivity"
             android:label="@string/title_activity_closet_class"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="clothes.puyan.tw.mushroom.MainActivity" />
+        </activity>
+        <activity
+            android:name=".MyClosetActivity"
+            android:label="@string/title_activity_my_closet" >
         </activity>
     </application>
 

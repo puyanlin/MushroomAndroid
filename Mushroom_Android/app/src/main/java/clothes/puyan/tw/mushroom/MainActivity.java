@@ -26,6 +26,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.List;
 
+import clothes.puyan.tw.mushroom.datasource.BookingManager;
 import clothes.puyan.tw.mushroom.datasource.NewsAdaptor;
 
 public class MainActivity extends Activity {
@@ -173,6 +174,23 @@ public class MainActivity extends Activity {
             }
         });
 
+        findViewById(R.id.btnMyCloset).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(BookingManager.getInstance().getBookingArray()==null||
+                   BookingManager.getInstance().getBookingArray().length==0){
+                    AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                    builder.setMessage("衣櫃裡還沒有衣服喔");
+                    builder.setPositiveButton("好",null);
+                    builder.create().show();
+
+                    return;
+                }
+                Intent intent = new Intent(MainActivity.this, MyClosetActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     @Override
@@ -180,7 +198,7 @@ public class MainActivity extends Activity {
         super.onResume();
         final View progressGetOpenClose=findViewById(R.id.progressOpenClose);
         final View llInfo=findViewById(R.id.llOpenCloseInfo);
-        final View rlOpenCloseView=findViewById(R.id.rlOpenClose);
+        final View rlOpenCloseView=findViewById(R.id.rlMyClosetNavigationbar);
         final View rlSale=findViewById(R.id.rlSales);
 
         rlOpenCloseView.setBackgroundColor(getResources().getColor(R.color.standard_yellow));
