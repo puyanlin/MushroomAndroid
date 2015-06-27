@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="clothes.puyan.tw.mushroom" >
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="clothes.puyan.tw.mushroom"
+    android:versionCode="150627"
+    android:versionName="1">
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.INTERNET" />

@@ -50,16 +50,25 @@ public class ClosetClassActivity extends AppCompatActivity {
                     LinearLayout llClothes=(LinearLayout) findViewById(R.id.llClothes);
 
                     for(final ParseObject cloth : objects){
-                        RelativeLayout rlClothView=(RelativeLayout) inflater.inflate(R.layout.layout_cloth,llClothes,false);
+                        RelativeLayout rlClothView=(RelativeLayout) inflater.inflate(R.layout.layout_cloth, llClothes, false);
                         llClothes.addView(rlClothView);
 
                         TextView tvPrice=(TextView)rlClothView.findViewById(R.id.tvClothPrice);
-                        tvPrice.setText("$"+cloth.getInt("price"));
+                        tvPrice.setText("$" + cloth.getInt("price"));
+
+                        final View checkView=rlClothView.findViewById(R.id.imgViewSelect);
+                        if(BookingManager.getInstance().isContainItem(cloth)){
+                            checkView.setVisibility(View.VISIBLE);
+                            rlClothView.setBackgroundColor(Color.parseColor("#888888"));
+                        }else{
+                            checkView.setVisibility(View.INVISIBLE);
+                            rlClothView.setBackgroundColor(Color.parseColor("#444444"));
+                        }
 
                         rlClothView.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                View checkView=v.findViewById(R.id.imgViewSelect);
+
                                 if(!BookingManager.getInstance().isContainItem(cloth)){
                                     checkView.setVisibility(View.VISIBLE);
                                     v.setBackgroundColor(Color.parseColor("#888888"));
