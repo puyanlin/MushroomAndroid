@@ -21,6 +21,7 @@
     <uses-permission android:name="clothes.puyan.tw.mushroom.permission.C2D_MESSAGE" />
 
     <application
+        android:name=".MushroomApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"

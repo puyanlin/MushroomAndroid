@@ -36,12 +36,6 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Enable Local Datastore.
-        Parse.initialize(this, "", "");
-
-        ParseInstallation.getCurrentInstallation().saveInBackground();
-
-
         LinearLayout llBtnFindMe=(LinearLayout) findViewById(R.id.llbtn_findMe);
         llBtnFindMe.setOnClickListener(new View.OnClickListener() {
             @Override

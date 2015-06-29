@@ -56,7 +56,7 @@ public class ClosetClassActivity extends AppCompatActivity {
                         TextView tvPrice=(TextView)rlClothView.findViewById(R.id.tvClothPrice);
                         tvPrice.setText("$" + cloth.getInt("price"));
 
-                        final View checkView=rlClothView.findViewById(R.id.imgViewSelect);
+                        final View checkView=rlClothView.findViewById(R.id.llSelectedView);
                         if(BookingManager.getInstance().isContainItem(cloth)){
                             checkView.setVisibility(View.VISIBLE);
                             rlClothView.setBackgroundColor(Color.parseColor("#888888"));

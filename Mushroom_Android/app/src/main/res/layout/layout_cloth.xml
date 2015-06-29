@@ -23,15 +23,31 @@
         android:background="#aaaaaa"
         android:layout_alignParentBottom="true" />
 
-    <ImageView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:id="@+id/imgViewSelect"
-        android:layout_alignParentTop="true"
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:layout_margin="5dp"
-        android:background="@drawable/checked"
-        android:visibility="invisible" />
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical"
+        android:id="@+id/llSelectedView">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="已選取"
+            android:textColor="#ffffff" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"
+            android:background="@drawable/checked"
+            android:visibility="visible" />
+    </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
