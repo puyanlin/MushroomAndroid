@@ -29,7 +29,6 @@ import java.net.URL;
 import java.util.List;
 
 import clothes.puyan.tw.mushroom.datasource.BookingManager;
-import clothes.puyan.tw.mushroom.datasource.NewsAdaptor;
 
 
 public class ClosetClassActivity extends AppCompatActivity {

@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">Mushroom</string>
+    <string name="app_name">香菇日韓服飾</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="action_mycloset">我的衣櫃</string>
     <string name="title_activity_closet_class">ClosetClassActivity</string>
-    <string name="title_activity_my_closet">我的衣櫥</string>
+    <string name="title_activity_my_closet">我的衣櫃</string>
 </resources>
