@@ -16,5 +16,7 @@ public class MushroomApplication extends Application {
         Parse.initialize(this, "", "");
         
         ParseInstallation.getCurrentInstallation().saveInBackground();
+
+        //
     }
 }
